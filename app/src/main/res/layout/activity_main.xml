@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:openDrawer="start">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/ThemeOverlay.AppCompat.Light">
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbarr"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/white"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/flContent"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nvView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            app:headerLayout="@layout/nav_header"
+            app:itemIconSize="30dp"
+            app:itemTextColor="@color/black"
+            app:menu="@menu/drawer_view" />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--    0 0 -->
+    <!--    <androidx.viewpager.widget.ViewPager-->
+    <!--        android:id="@+id/view_pager"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:overScrollMode="never"-->
+    <!--        app:layout_constraintBottom_toTopOf="@id/bottom_navigation_view_linear"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="1.0"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintVertical_bias="0.0" />-->
+
+    <!--    <com.example.sellclothesapp.ui.customview.bottomnavigtion.BubbleNavigationLinearView-->
+    <!--        android:id="@+id/bottom_navigation_view_linear"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:background="@color/color19A7CE"-->
+    <!--        android:elevation="0dp"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        android:padding="12dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent">-->
+
+    <!--        <com.example.sellclothesapp.ui.customview.bottomnavigtion.BubbleToggleView-->
+    <!--            android:id="@+id/home"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            app:bt_active="true"-->
+    <!--            app:bt_colorActive="@color/black"-->
+    <!--            app:bt_colorInactive="@color/white"-->
+    <!--            app:bt_icon="@drawable/round_home_24"-->
+    <!--            app:bt_shape="@drawable/transition_background_drawable_home"-->
+    <!--            app:bt_title="Home" />-->
+
+    <!--        <com.example.sellclothesapp.ui.customview.bottomnavigtion.BubbleToggleView-->
+    <!--            android:id="@+id/heart"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            app:bt_colorActive="@color/blue_grey_active"-->
+    <!--            app:bt_colorInactive="@color/white"-->
+    <!--            app:bt_icon="@drawable/round_favorite_24"-->
+    <!--            app:bt_shape="@drawable/transition_background_drawable_home"-->
+    <!--            app:bt_title="Favourite" />-->
+
+    <!--        <com.example.sellclothesapp.ui.customview.bottomnavigtion.BubbleToggleView-->
+    <!--            android:id="@+id/card"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            app:bt_colorActive="@color/blue_grey_active"-->
+    <!--            app:bt_colorInactive="@color/white"-->
+    <!--            app:bt_icon="@drawable/round_shopping_cart_24"-->
+    <!--            app:bt_shape="@drawable/transition_background_drawable_home"-->
+    <!--            app:bt_title="Cart" />-->
+
+    <!--        <com.example.sellclothesapp.ui.customview.bottomnavigtion.BubbleToggleView-->
+    <!--            android:id="@+id/person"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            app:bt_colorActive="@color/blue_grey_active"-->
+    <!--            app:bt_colorInactive="@color/white"-->
+    <!--            app:bt_icon="@drawable/round_person_24"-->
+    <!--            app:bt_shape="@drawable/transition_background_drawable_home"-->
+    <!--            app:bt_title="Account" />-->
+
+    <!--    </com.example.sellclothesapp.ui.customview.bottomnavigtion.BubbleNavigationLinearView>-->
+
